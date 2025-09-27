@@ -1,0 +1,789 @@
+[gd_scene load_steps=42 format=3 uid="uid://dvd7nakwwre3f"]
+
+[ext_resource type="Script" uid="uid://dtoovey3km3b3" path="res://addons/slides/diapositivas.gd" id="1_rsqhl"]
+[ext_resource type="PackedScene" uid="uid://5d2oooxpqjjn" path="res://ejemplos/escena_con_codigo/logo_que_choca_con_paredes.tscn" id="2_8ojqw"]
+[ext_resource type="Script" uid="uid://ccmkmyjxjoopp" path="res://ejemplos/diapositiva_interactiva/ejemplo_diapositiva_interactiva.gd" id="3_h45qf"]
+[ext_resource type="Texture2D" uid="uid://b6548opclxrb5" path="res://icon.svg" id="4_ybn4d"]
+[ext_resource type="Script" uid="uid://pckf3ciqjegr" path="res://ejemplos/animacion_basica/ejemplo_de_diapositiva_con_animaciones.gd" id="5_8ojqw"]
+[ext_resource type="Script" uid="uid://dj3lw3ygmu5ar" path="res://ejemplos/lista_de_acciones/ejemplo_con_lista_de_acciones.gd" id="6_h45qf"]
+[ext_resource type="Script" uid="uid://cjl8wre8g346n" path="res://addons/slides/utils/animation_player.gd" id="7_w1i3l"]
+
+[sub_resource type="SystemFont" id="SystemFont_4ddtj"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_wmdgt"]
+fallbacks = Array[Font]([SubResource("SystemFont_4ddtj")])
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqobm"]
+font = SubResource("SystemFont_wmdgt")
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu0nv"]
+bg_color = Color(1, 0.458824, 0.254902, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_aakhp"]
+fallbacks = Array[Font]([SubResource("SystemFont_4ddtj")])
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxxs5"]
+font = SubResource("SystemFont_aakhp")
+font_size = 80
+
+[sub_resource type="SystemFont" id="SystemFont_e2f0r"]
+fallbacks = Array[Font]([SubResource("SystemFont_4ddtj")])
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_pt12k"]
+font = SubResource("SystemFont_e2f0r")
+font_size = 60
+font_color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_503f1"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h45qf"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ojqw"]
+bg_color = Color(0, 0, 0, 0.823529)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ojqw"]
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7tbg"]
+content_margin_left = 10.0
+content_margin_top = 0.0
+bg_color = Color(0, 0, 0, 0.862745)
+skew = Vector2(1, 0)
+expand_margin_left = 200.0
+expand_margin_right = 100.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="SystemFont" id="SystemFont_7cjgy"]
+font_names = PackedStringArray("Cooper", "Ravie", "Snap ITC")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fn8aw"]
+font = SubResource("SystemFont_7cjgy")
+font_size = 60
+shadow_size = 30
+shadow_color = Color(0.137255, 0.156863, 0.32549, 1)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ul1xf"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 0.968627)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ul1xf"]
+font_size = 40
+
+[sub_resource type="Animation" id="Animation_8ojqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(636, 515)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icon:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Icon:skew")
+tracks/4/interp = 4
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_h45qf"]
+resource_name = "animacion_1"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_w1i3l"]
+resource_name = "animacion_2"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.633333, 1.33333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.498039, 0.47451, 0.772549, 1), Color(0, 0.956578, 0.681116, 1), Color(0.837602, 0.311223, 0.390591, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_503f1"]
+resource_name = "animacion_3"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:skew")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.56905]
+}
+
+[sub_resource type="Animation" id="Animation_ybn4d"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.261799, 0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(636, 515), Vector2(1281, 521)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h45qf"]
+_data = {
+&"RESET": SubResource("Animation_8ojqw"),
+&"animacion_1": SubResource("Animation_h45qf"),
+&"animacion_2": SubResource("Animation_w1i3l"),
+&"animacion_3": SubResource("Animation_503f1"),
+&"new_animation": SubResource("Animation_ybn4d")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h45qf"]
+bg_color = Color(0, 0, 0, 0.941176)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1i3l"]
+font_size = 30
+
+[sub_resource type="Animation" id="Animation_v4tvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(749, 579)]
+}
+
+[sub_resource type="Animation" id="Animation_y722n"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0392949, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(749, 579), Vector2(1157, 579)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4tvw"]
+_data = {
+&"RESET": SubResource("Animation_v4tvw"),
+&"new_animation": SubResource("Animation_y722n")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y722n"]
+bg_color = Color(0.211765, 0.239216, 0.290196, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.113725, 0.133333, 0.160784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 25.0
+expand_margin_top = 25.0
+expand_margin_right = 25.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="SystemFont" id="SystemFont_503f1"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_y722n"]
+font = SubResource("SystemFont_503f1")
+font_size = 100
+
+[sub_resource type="Animation" id="Animation_vpeoj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("¿Preguntas?:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x2bli"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("¿Preguntas?:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(0.8, 0.8, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rxgjl"]
+_data = {
+&"RESET": SubResource("Animation_vpeoj"),
+&"new_animation": SubResource("Animation_x2bli")
+}
+
+[node name="Diapositivas" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_rsqhl")
+diapositiva_actual = 1
+metadata/_edit_lock_ = true
+
+[node name="EjemploTitulo" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="ColorRect" parent="EjemploTitulo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Titulo" type="Label" parent="EjemploTitulo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -844.0
+offset_top = 235.0
+offset_right = 844.0
+offset_bottom = 694.0
+grow_horizontal = 2
+text = "Titulo"
+label_settings = SubResource("LabelSettings_uqobm")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Subtitulo" type="Label" parent="EjemploTitulo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = 28.0
+offset_right = 446.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pu0nv")
+text = "Subtitulo"
+label_settings = SubResource("LabelSettings_oxxs5")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Nombre" type="Label" parent="EjemploTitulo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -844.0
+offset_top = 302.0
+offset_right = 844.0
+offset_bottom = 761.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Juan Manuel Fernandes dos Santos"
+label_settings = SubResource("LabelSettings_pt12k")
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Instruccion" type="Label" parent="EjemploTitulo"]
+layout_mode = 0
+offset_left = 1711.0
+offset_top = 489.0
+offset_right = 1829.0
+offset_bottom = 621.0
+text = "Avanzar
+<Ctrl Num 6>"
+label_settings = SubResource("LabelSettings_503f1")
+horizontal_alignment = 2
+
+[node name="EjemploEscenaConCodigo" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="ColorRect" parent="EjemploEscenaConCodigo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="LogoQueChocaConParedes" parent="EjemploEscenaConCodigo" instance=ExtResource("2_8ojqw")]
+position = Vector2(1285.15, 418.857)
+
+[node name="Dato_ El plugin hace que con Alt+Enter se pueda poner el editor en pantalla completa" type="Label" parent="EjemploEscenaConCodigo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -11.5
+offset_right = 304.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dato: El plugin hace que con Alt+Enter se pueda poner el editor en pantalla completa"
+label_settings = SubResource("LabelSettings_h45qf")
+
+[node name="Instruccion" type="Label" parent="EjemploEscenaConCodigo"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 489.0
+offset_right = 161.0
+offset_bottom = 621.0
+text = "Retroceder
+<Ctrl Num 4>"
+label_settings = SubResource("LabelSettings_503f1")
+horizontal_alignment = 2
+
+[node name="EjemploImagenSobreElEditor" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="LogoQueChocaConParedes" parent="EjemploImagenSobreElEditor" instance=ExtResource("2_8ojqw")]
+position = Vector2(920, 527)
+
+[node name="La única diferencia con\nla anterior es que no hay fondo" type="Label" parent="EjemploImagenSobreElEditor"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.5
+offset_top = -136.0
+offset_right = 331.5
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ojqw")
+text = "La única diferencia con
+la anterior es que no hay fondo"
+label_settings = SubResource("LabelSettings_8ojqw")
+horizontal_alignment = 1
+
+[node name="Puede servir\npara poner  el tema\ndel que se esta hablando\n                            v" type="Label" parent="EjemploImagenSobreElEditor"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -614.0
+offset_top = -393.0
+offset_right = -86.0
+offset_bottom = -164.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ojqw")
+text = "Puede servir
+para poner  el tema
+del que se esta hablando
+                            v"
+label_settings = SubResource("LabelSettings_8ojqw")
+
+[node name="Dato_ La propiedad mouse_filter de la diapositiva en sí debería estar en Ignore, si no no va a dejar clickear el editor" type="Label" parent="EjemploImagenSobreElEditor"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1530.0
+offset_top = -393.0
+offset_right = -923.0
+offset_bottom = -164.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ojqw")
+text = "Dato: La propiedad mouse_filter de la diapositiva en sí debería estar en Ignore, si no no va a dejar clickear el editor"
+label_settings = SubResource("LabelSettings_8ojqw")
+autowrap_mode = 2
+
+[node name="Imagen sobre el editor" type="Label" parent="EjemploImagenSobreElEditor"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -308.0
+offset_top = -115.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_x7tbg")
+text = "Imagen sobre el editor"
+label_settings = SubResource("LabelSettings_fn8aw")
+
+[node name="EjemploDiapositivaInteractiva" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_h45qf")
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EjemploDiapositivaInteractiva"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -446.0
+offset_top = -348.0
+offset_right = 446.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Instrucciones" type="Label" parent="EjemploDiapositivaInteractiva/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ul1xf")
+text = "Acción primaria (ctrl 7): aumentar tamaño
+Acción secundaria (ctrl 8): disminuir tamaño
+Acción terciaria (ctrl 9): trasparentar"
+label_settings = SubResource("LabelSettings_ul1xf")
+
+[node name="LogoGodot" type="TextureRect" parent="EjemploDiapositivaInteractiva/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ybn4d")
+expand_mode = 3
+
+[node name="TiemposApretandoCadaAccion" type="Label" parent="EjemploDiapositivaInteractiva/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ul1xf")
+text = "Tiempo apretando accion secundaria: 
+Tiempo apretando accion terciara: "
+label_settings = SubResource("LabelSettings_ul1xf")
+
+[node name="EjemploDeDiapositivaConAnimaciones" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_8ojqw")
+
+[node name="Intentá apretar las acciones\npara ver como cambia de animación" type="Label" parent="EjemploDeDiapositivaConAnimaciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.5
+offset_top = 37.0
+offset_right = 358.5
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ul1xf")
+text = "Intentá apretar las acciones
+para ver como cambia de animación"
+label_settings = SubResource("LabelSettings_ul1xf")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EjemploDeDiapositivaConAnimaciones"]
+libraries = {
+&"": SubResource("AnimationLibrary_h45qf")
+}
+autoplay = "new_animation"
+
+[node name="Icon" type="Sprite2D" parent="EjemploDeDiapositivaConAnimaciones"]
+position = Vector2(636, 515)
+texture = ExtResource("4_ybn4d")
+
+[node name="EjemploConListaDeAcciones" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_h45qf")
+
+[node name="Cada vez que se apreta la acción principal,\npasa a la siguiente acción" type="Label" parent="EjemploConListaDeAcciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = 172.0
+offset_right = 306.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_h45qf")
+text = "Cada vez que se apreta la acción principal,
+pasa a la siguiente acción"
+label_settings = SubResource("LabelSettings_w1i3l")
+
+[node name="InstruccionesVolverAtras" type="Label" parent="EjemploConListaDeAcciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.5
+offset_top = 277.0
+offset_right = 336.5
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_h45qf")
+text = "Cada vez que se apreta la acción SECUNDARIA,
+revierte la acción"
+label_settings = SubResource("LabelSettings_w1i3l")
+
+[node name="UltimaAccion" type="Label" parent="EjemploConListaDeAcciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -143.0
+offset_right = 321.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_h45qf")
+text = "Luego de la última acción, tocar acción primaria pasa a la siguiente slide"
+label_settings = SubResource("LabelSettings_w1i3l")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EjemploConListaDeAcciones"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 579.0
+offset_right = 1141.0
+offset_bottom = 707.0
+scale = Vector2(1.00786, 1.00786)
+
+[node name="LogoGodot" type="TextureRect" parent="EjemploConListaDeAcciones/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ybn4d")
+
+[node name="LogoGodot2" type="TextureRect" parent="EjemploConListaDeAcciones/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ybn4d")
+
+[node name="LogoGodot3" type="TextureRect" parent="EjemploConListaDeAcciones/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ybn4d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EjemploConListaDeAcciones"]
+libraries = {
+&"": SubResource("AnimationLibrary_v4tvw")
+}
+script = ExtResource("7_w1i3l")
+
+[node name="Preguntas" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="¿Preguntas?" type="Label" parent="Preguntas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -78.5
+offset_right = 300.5
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(292.5, 84.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_y722n")
+text = "¿Preguntas?"
+label_settings = SubResource("LabelSettings_y722n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Preguntas"]
+libraries = {
+&"": SubResource("AnimationLibrary_rxgjl")
+}
+autoplay = "new_animation"
+script = ExtResource("7_w1i3l")

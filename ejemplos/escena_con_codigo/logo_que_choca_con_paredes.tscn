@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://5d2oooxpqjjn"]
+
+[ext_resource type="Texture2D" uid="uid://b6548opclxrb5" path="res://icon.svg" id="1_3fnfu"]
+[ext_resource type="Script" uid="uid://8gk5m4pa4slv" path="res://ejemplos/escena_con_codigo/logo_que_choca_con_paredes.gd" id="2_1w20c"]
+
+[node name="LogoQueChocaConParedes" type="Sprite2D"]
+position = Vector2(271, 173)
+texture = ExtResource("1_3fnfu")
+centered = false
+script = ExtResource("2_1w20c")

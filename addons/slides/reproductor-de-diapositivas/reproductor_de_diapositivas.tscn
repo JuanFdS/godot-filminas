@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://chelsuqkjo6n0"]
+
+[ext_resource type="Script" uid="uid://bf5px487p77g" path="res://addons/slides/reproductor-de-diapositivas/reproductor_de_diapositivas.gd" id="1_hdo8m"]
+
+[node name="ReproductorDeDiapositivas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_hdo8m")
